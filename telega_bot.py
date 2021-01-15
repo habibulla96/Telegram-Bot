@@ -72,7 +72,6 @@ def call_data(call):
     message_id = call.message.message_id
     user = call.message.chat.first_name
 
-
     if call.data == 'news':
         new = get_infooo(0)
         textt = ""
@@ -81,7 +80,6 @@ def call_data(call):
             textt = textt + ti
         bot.edit_message_text(f"{textt}", message_id=message_id, chat_id=chat_id)
         bot.edit_message_reply_markup(message_id=message_id, chat_id=chat_id, reply_markup=main_numbers)
-
 
     if call.data == "btn1":
         btn_1 = main_key(1)
